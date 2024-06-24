@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from "express";
-import prisma from "../../../lib/prisma/init";
+import { NextFunction, Request, Response } from 'express';
+import prisma from '../../../lib/prisma/init';
 
 export const getCommentByPost = async (
   req: Request,
@@ -12,10 +12,13 @@ export const getCommentByPost = async (
       where: {
         postId: id?.toString(),
       },
+      orderBy: {
+        createdAt: 'desc',
+      },
       select: {
         id: true,
-        comment:true,
-        createdAt:true,
+        comment: true,
+        createdAt: true,
         User: {
           select: {
             verified: true,
