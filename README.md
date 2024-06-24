@@ -2,7 +2,6 @@
 
 This repository contains the backend code for a social media application built using Node.js and Express. The server handles various functionalities required for the social media app "Qui."
 
-Check out the React Native App - [Qui React Native App](https://github.com/ElSierra/Social-app-React-Native)
 
 ## Stack Used
 
